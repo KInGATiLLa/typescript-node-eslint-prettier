@@ -1,7 +1,8 @@
-import * as fs from 'fs';
+import fs from 'fs';
+import { main } from './lib/main';
 import express, { Request, Response } from 'express';
 
-function mane(num: number | undefined) {
+function mane(num: number | undefined): number {
   return num ? num * 12 : 0;
 }
 
@@ -16,7 +17,7 @@ console.log('hello');
 const app = express();
 
 app.get('/', (req: Request, res: Response) => {
-  res.end('Hello world');
+  res.json(main.hello({ name: 'Galt' }));
 });
 
 app.listen(4000, () => {

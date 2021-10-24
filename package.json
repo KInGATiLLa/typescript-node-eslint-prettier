@@ -4,7 +4,8 @@
   "description": "Eslint test",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node index.ts"
+    "start": "nodemon --exec ts-node ./src/index.ts",
+    "build": "tsc -p ./tsconfig.json"
   },
   "keywords": [
     "eslint"
@@ -19,6 +20,7 @@
     "eslint": "^8.1.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "nodemon": "^2.0.14",
     "prettier": "^2.4.1",
     "ts-node": "^10.4.0",
     "tslib": "^2.3.1",
